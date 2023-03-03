@@ -1,12 +1,58 @@
 {
-  "Student": {
+  "Course": {
     "_": {
-      "items": 20
+      "items": 10
     },
-    "email": {
+    "title": {
+      "string": [
+        "Cloud Services 101: An Introduction to Cloud Computing",
+        "DevOps Monitoring and Alerting: Strategies for Building Reliable Applications",
+        "Building Scalable Web Applications with AWS Elastic Beanstalk",
+        "Kubernetes Fundamentals: Deploying and Scaling Applications",
+        "Practical Observability: Monitoring and Debugging Distributed Systems",
+        "Advanced Observability: Analyzing and Optimizing System Performance",
+        "Developing Real-Time Web Applications with WebSockets",
+        "Serverless Computing with AWS Lambda",
+        "Effective Error Handling in Modern JavaScript Applications",
+        "Building Modern Web APIs with Node.js and Express"
+      ]
+    },
+    "author": {
+      "string": [
+        "Samantha Jones",
+        "David Nguyen",
+        "Jasmine Patel",
+        "Gabriel Rodriguez",
+        "Sophie Lee"
+      ]
+    },
+    "publicationTime": {
+      "dateTime": {
+        "min": "2020-01-01T00:00:00Z",
+        "max": "2023-02-28T23:59:59Z"
+      },
+    "challengeRating": {
+      "string":
+        [
+          "beginner",
+          "intermediate",
+          "advanced",
+          "other/special"
+        ]
+    },
+    "feedbacks": {
+      "hasMany": "UserFeedbacks"
+    }
+  },
+
+  "UserFeedback": {
+    "_": {
+      "items": 50
+    },
+    "userEmail": {
       "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
     },
-    "roleType": {
+    "userRoleType": {
       "string": [
         "Engineering",
         "Executive",
@@ -17,53 +63,38 @@
         "Other/Not Specified"
       ]
     },
-    "accountCreation": {
-      "dateTime": {
-        "min": "2020-01-01T00:00:00Z",
-        "max": "2023-02-28T23:59:59Z"
-      }
-    },
-    "courses": {
-      "hasMany": "Course"
-    }
-  },
-
-  "Course": {
-    "_": {
-      "items": 5
-    },
-    "title": {
-      "loremWords": {
-        "minLength": 3,
-        "maxLength": 8
-      }
-    },
-    "description": {
+    "comments": {
       "loremParagraphs": {
-        "minLength": 1,
-        "maxLength": 2
+        "minLength": 0,
+        "maxLength": 3
       }
     },
-      "views": {
+      "qualityScore": {
         "int": {
-          "min": 0,
-          "max": 10000
+          "min": 1,
+          "max": 5
         }
       },
-      "completions": {
+      "relevancyScore": {
         "int": {
-          "min": 0,
-          "max": 1000
+          "min": 1,
+          "max": 5
         }
       },
-      "publishedAt": {
+      "npsScore": {
+        "int": {
+          "min": 1,
+          "max": 10
+        }
+      },
+      "createdAt": {
         "dateTime": {
           "min": "2020-01-01T00:00:00Z",
           "max": "2023-02-28T23:59:59Z"
         }
       },
-      "students": {
-        "hasMany": "Student"
+      "course": {
+        "belongsTo": "Course"
       }
     }
 }
