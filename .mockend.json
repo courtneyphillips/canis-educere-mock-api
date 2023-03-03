@@ -1,90 +1,71 @@
 {
   "Student": {
     "_": {
-      "data": [
-
-
-          {
-              "id": "1001",
-              "name": "John Doe",
-              "email": "johndoe@example.com",
-              "courses": [
-                  {
-                      "id": "ALERT101",
-                      "name": "Alerting Best Practices",
-                      "grade": "A",
-                      "feedback": "I enjoyed this course and found the material to be very interesting.",
-                      "quality_rating": 4,
-                      "relevance_rating": 5
-                  },
-                  {
-                      "id": "KUBE201",
-                      "name": "Kubernetes Security",
-                      "grade": "B+",
-                      "feedback": "This course was challenging, but I felt like I learned a lot.",
-                      "quality_rating": 3,
-                      "relevance_rating": 4
-                  },
-                  {
-                      "id": "DOGFOOD101",
-                      "name": "Dogfooding in the Cloud",
-                      "grade": "C",
-                      "feedback": "I struggled with this course and found it difficult to understand the material.",
-                      "quality_rating": 2,
-                      "relevance_rating": 3
-                  },
-                  {
-                      "id": "TRACE101",
-                      "name": "Getting Started with Distributed Tracing",
-                      "grade": "B",
-                      "feedback": "This course was interesting, but I felt like it could have gone into more detail.",
-                      "quality_rating": 3,
-                      "relevance_rating": 4
-                  }
-              ]
-          },
-          {
-              "id": "1002",
-              "name": "Jane Smith",
-              "email": "janesmith@example.com",
-              "courses": [
-                  {
-                      "id": "ALERT101",
-                      "name": "Alerting Best Practices",
-                      "grade": "A-",
-                      "feedback": "I enjoyed this course and found the material to be very useful.",
-                      "quality_rating": 5,
-                      "relevance_rating": 4
-                  },
-                  {
-                      "id": "KUBE101",
-                      "name": "Kubernetes Security",
-                      "grade": "B-",
-                      "feedback": "I found this course to be very challenging and struggled to keep up with the material.",
-                      "quality_rating": 3,
-                      "relevance_rating": 2
-                  },
-                  {
-                      "id": "DOGFOOD201",
-                      "name": "Dogfooding in the Cloud",
-                      "grade": "B+",
-                      "feedback": "This course was very interesting and gave me a new perspective on cloud development.",
-                      "quality_rating": 4,
-                      "relevance_rating": 5
-                  },
-                  {
-                      "id": "TRACE101",
-                      "name": "Getting Started with Distributed Tracing",
-                      "grade": "A",
-                      "feedback": "I loved this course and found it to be very useful in my work.",
-                      "quality_rating": 5,
-                      "relevance_rating": 5
-                  }
-              ]
-          }
-
-
+      "items": 20
+    },
+    "email": {
+      "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
+    },
+    "roleType": {
+      "string": [
+        "Engineering",
+        "Executive",
+        "DevOps",
+        "Site Reliability",
+        "Cloud",
+        "Analyst",
+        "Other/Not Specified"
       ]
+    },
+    "accountCreation": {
+      "dateTime": {
+        "min": "2020-01-01T00:00:00Z",
+        "max": "2023-02-28T23:59:59Z"
+      }
+    },
+    "courses": {
+      "hasMany": "Course"
+    }
+  },
+
+
+  "Course": {
+    "_": {
+      "items": 5
+    },
+    "title": {
+      "loremWords": {
+        "minLength": 3,
+        "maxLength": 8
+      }
+    },
+    "description": {
+      "loremParagraphs": {
+        "minLength": 1,
+        "maxLength": 2
+      }
+    },
+      "views": {
+        "int": {
+          "min": 0,
+          "max": 10000
+        }
+      },
+      "completions": {
+        "int": {
+          "min": 0,
+          "max": 1000
+        }
+      }
+    },
+    "publishedAt": {
+      "dateTime": {
+        "min": "2020-01-01T00:00:00Z",
+        "max": "2023-02-28T23:59:59Z"
+      }
+    },
+    "students": {
+      "hasMany": "Student"
     }
   }
 }
