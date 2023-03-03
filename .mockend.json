@@ -42,7 +42,7 @@
           ]
       },
       "feedbacks": {
-        "hasMany": "UserFeedbacks"
+        "hasMany": "UserFeedback"
       }
 
     },
