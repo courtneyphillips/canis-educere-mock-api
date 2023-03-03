@@ -3,45 +3,46 @@
     "_": {
       "items": 10
     },
-    "title": {
-      "string": [
-        "Cloud Services 101: An Introduction to Cloud Computing",
-        "DevOps Monitoring and Alerting: Strategies for Building Reliable Applications",
-        "Building Scalable Web Applications with AWS Elastic Beanstalk",
-        "Kubernetes Fundamentals: Deploying and Scaling Applications",
-        "Practical Observability: Monitoring and Debugging Distributed Systems",
-        "Advanced Observability: Analyzing and Optimizing System Performance",
-        "Developing Real-Time Web Applications with WebSockets",
-        "Serverless Computing with AWS Lambda",
-        "Effective Error Handling in Modern JavaScript Applications",
-        "Building Modern Web APIs with Node.js and Express"
-      ]
-    },
-    "author": {
-      "string": [
-        "Samantha Jones",
-        "David Nguyen",
-        "Jasmine Patel",
-        "Gabriel Rodriguez",
-        "Sophie Lee"
-      ]
-    },
-    "publicationTime": {
-      "dateTime": {
-        "min": "2020-01-01T00:00:00Z",
-        "max": "2023-02-28T23:59:59Z"
-      },
-    "challengeRating": {
-      "string":
-        [
-          "beginner",
-          "intermediate",
-          "advanced",
-          "other/special"
+      "title": {
+        "string": [
+          "Cloud Services 101: An Introduction to Cloud Computing",
+          "DevOps Monitoring and Alerting: Strategies for Building Reliable Applications",
+          "Building Scalable Web Applications with AWS Elastic Beanstalk",
+          "Kubernetes Fundamentals: Deploying and Scaling Applications",
+          "Practical Observability: Monitoring and Debugging Distributed Systems",
+          "Advanced Observability: Analyzing and Optimizing System Performance",
+          "Developing Real-Time Web Applications with WebSockets",
+          "Serverless Computing with AWS Lambda",
+          "Effective Error Handling in Modern JavaScript Applications",
+          "Building Modern Web APIs with Node.js and Express"
         ]
-    },
-    "feedbacks": {
-      "hasMany": "UserFeedbacks"
+      },
+      "author": {
+        "string": [
+          "Samantha Jones",
+          "David Nguyen",
+          "Jasmine Patel",
+          "Gabriel Rodriguez",
+          "Sophie Lee"
+        ]
+      },
+      "publicationTime": {
+        "dateTime": {
+          "min": "2020-01-01T00:00:00Z",
+          "max": "2023-02-28T23:59:59Z"
+        },
+      "challengeRating": {
+        "string":
+          [
+            "beginner",
+            "intermediate",
+            "advanced",
+            "other/special"
+          ]
+      },
+      "feedbacks": {
+        "hasMany": "UserFeedbacks"
+      }
     }
   },
 
@@ -97,5 +98,4 @@
         "belongsTo": "Course"
       }
     }
-  }
 }
