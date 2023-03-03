@@ -41,13 +41,13 @@
             "other/special"
           ]
       },
-      "userFeedbacks": {
-        "hasMany": "UserFeedback"
+      "feedbacks": {
+        "hasMany": "Feedback"
       }
 
   },
 
-  "UserFeedback": {
+  "Feedback": {
       "_": {
         "items": 50
       },
