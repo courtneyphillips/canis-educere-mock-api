@@ -30,6 +30,7 @@
         "dateTime": {
           "min": "2020-01-01T00:00:00Z",
           "max": "2023-02-28T23:59:59Z"
+          }
         },
       "challengeRating": {
         "string":
@@ -43,59 +44,59 @@
       "feedbacks": {
         "hasMany": "UserFeedbacks"
       }
-    }
-  },
 
-  "UserFeedback": {
-    "_": {
-      "items": 50
     },
-    "userEmail": {
-      "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
-    },
-    "userRoleType": {
-      "string": [
-        "Engineering",
-        "Executive",
-        "DevOps",
-        "Site Reliability",
-        "Cloud",
-        "Analyst",
-        "Other/Not Specified"
-      ]
-    },
-    "comments": {
-      "loremParagraphs": {
-        "minLength": 0,
-        "maxLength": 3
-      }
-    },
-      "qualityScore": {
-        "int": {
-          "min": 1,
-          "max": 5
+
+    "UserFeedback": {
+      "_": {
+        "items": 50
+      },
+      "userEmail": {
+        "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
+      },
+      "userRoleType": {
+        "string": [
+          "Engineering",
+          "Executive",
+          "DevOps",
+          "Site Reliability",
+          "Cloud",
+          "Analyst",
+          "Other/Not Specified"
+        ]
+      },
+      "comments": {
+        "loremParagraphs": {
+          "minLength": 0,
+          "maxLength": 3
         }
       },
-      "relevancyScore": {
-        "int": {
-          "min": 1,
-          "max": 5
+        "qualityScore": {
+          "int": {
+            "min": 1,
+            "max": 5
+          }
+        },
+        "relevancyScore": {
+          "int": {
+            "min": 1,
+            "max": 5
+          }
+        },
+        "npsScore": {
+          "int": {
+            "min": 1,
+            "max": 10
+          }
+        },
+        "createdAt": {
+          "dateTime": {
+            "min": "2020-01-01T00:00:00Z",
+            "max": "2023-02-28T23:59:59Z"
+          }
+        },
+        "course": {
+          "belongsTo": "Course"
         }
-      },
-      "npsScore": {
-        "int": {
-          "min": 1,
-          "max": 10
-        }
-      },
-      "createdAt": {
-        "dateTime": {
-          "min": "2020-01-01T00:00:00Z",
-          "max": "2023-02-28T23:59:59Z"
-        }
-      },
-      "course": {
-        "belongsTo": "Course"
-      }
     }
 }
