@@ -56,16 +56,16 @@
           "min": 0,
           "max": 1000
         }
+      },
+      "publishedAt": {
+        "dateTime": {
+          "min": "2020-01-01T00:00:00Z",
+          "max": "2023-02-28T23:59:59Z"
+        }
+      },
+      "students": {
+        "hasMany": "Student"
       }
     },
-    "publishedAt": {
-      "dateTime": {
-        "min": "2020-01-01T00:00:00Z",
-        "max": "2023-02-28T23:59:59Z"
-      }
-    },
-    "students": {
-      "hasMany": "Student"
-    }
   }
 }
