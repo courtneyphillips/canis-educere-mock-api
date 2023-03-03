@@ -28,7 +28,6 @@
     }
   },
 
-
   "Course": {
     "_": {
       "items": 5
@@ -66,6 +65,5 @@
       "students": {
         "hasMany": "Student"
       }
-    },
-  }
+    }
 }
