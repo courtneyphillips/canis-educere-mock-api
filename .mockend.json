@@ -125,7 +125,7 @@
         "activeLearningHours": {
           "int": {
             "min": 0,
-            "max": 500
+            "max": 200
           }
         },
         "fundamentalsCertified": {
