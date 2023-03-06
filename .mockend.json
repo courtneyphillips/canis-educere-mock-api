@@ -1,60 +1,64 @@
 {
-  "Course": {
+  "Organization": {
     "_": {
-      "items": 10
+      "items": 20
     },
-      "title": {
+      "companyName": {
         "string": [
-          "Cloud Services 101: An Introduction to Cloud Computing",
-          "DevOps Monitoring and Alerting: Strategies for Building Reliable Applications",
-          "Building Scalable Web Applications with AWS Elastic Beanstalk",
-          "Kubernetes Fundamentals: Deploying and Scaling Applications",
-          "Practical Observability: Monitoring and Debugging Distributed Systems",
-          "Advanced Observability: Analyzing and Optimizing System Performance",
-          "Developing Real-Time Web Applications with WebSockets",
-          "Serverless Computing with AWS Lambda",
-          "Effective Error Handling in Modern JavaScript Applications",
-          "Building Modern Web APIs with Node.js and Express"
+          "CyberHive",
+          "SwiftFinch",
+          "CyberWolf",
+          "TechOtter",
+          "CircuitPuma",
+          "RoboRaven",
+          "AquaGator",
+          "CygnusTech",
+          "SparkTurtle",
+          "PixelPenguin",
+          "LuminaLion",
+          "CodeCheetah",
+          "CyberCrab",
+          "NeuralNarwhal",
+          "ElectronElephant",
+          "BrightButterfly",
+          "GeckoGenius",
+          "NeonNightingale",
+          "BigDataBison",
+          "DataDragonfly"
         ]
       },
-      "author": {
+      "industrySector": {
         "string": [
-          "Samantha Jones",
-          "David Nguyen",
-          "Jasmine Patel",
-          "Gabriel Rodriguez",
-          "Sophie Lee"
+          "Artificial Intelligence (AI)",
+          "Internet of Things (IoT)",
+          "Virtual Reality (VR)",
+          "Blockchain",
+          "Cybersecurity",
+          "Cloud Computing",
+          "Big Data and Analytics"
         ]
       },
-      "publicationTime": {
-        "dateTime": {
-          "min": "2020-01-01T00:00:00Z",
-          "max": "2023-02-28T23:59:59Z"
-          }
-        },
-      "challengeRating": {
-        "string":
-          [
-            "beginner",
-            "intermediate",
-            "advanced",
-            "other/special"
-          ]
+      "learners": {
+        "hasMany": "Learners"
       },
-      "feedbacks": {
-        "hasMany": "Feedback"
+      "accountHealth": {
+        "string": [
+          "good",
+          "okay",
+          "at risk",
+          "poor"
+        ]
       }
-
   },
 
-  "Feedback": {
+  "Learner": {
       "_": {
         "items": 50
       },
       "userEmail": {
         "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
       },
-      "userRoleType": {
+      "roleType": {
         "string": [
           "Engineering",
           "Executive",
@@ -65,38 +69,52 @@
           "Other/Not Specified"
         ]
       },
-      "comments": {
-        "loremParagraphs": {
-          "minLength": 0,
-          "maxLength": 3
-        }
-      },
-        "qualityScore": {
+        "activeLearningHours": {
           "int": {
-            "min": 1,
-            "max": 5
+            "min": 0,
+            "max": 500
           }
         },
-        "relevancyScore": {
-          "int": {
-            "min": 1,
-            "max": 5
-          }
+        "fundamentalsCertified": {
+          "string": [
+            "true",
+            "false",
+            "in progress",
+            "pending exam grade"
+          ]
         },
-        "npsScore": {
-          "int": {
-            "min": 1,
-            "max": 10
-          }
+        "devOpsCertified": {
+          "string": [
+            "true",
+            "false",
+            "in progress",
+            "pending exam grade"
+          ]
         },
-        "createdAt": {
+        "kubernetesCertified": {
+          "string": [
+            "true",
+            "false",
+            "in progress",
+            "pending exam grade"
+          ]
+        },
+        "advancedSkillsCertified": {
+          "string": [
+            "true",
+            "false",
+            "in progress",
+            "pending exam grade"
+          ]
+        },
+        "accountCreation": {
           "dateTime": {
             "min": "2020-01-01T00:00:00Z",
             "max": "2023-02-28T23:59:59Z"
           }
         },
-        "course": {
-          "belongsTo": "Course"
+        "organization": {
+          "belongsTo": "Organization"
         }
     }
 }
