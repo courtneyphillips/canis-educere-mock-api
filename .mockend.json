@@ -2,29 +2,30 @@
   "Organization": {
     "_": {
       "items": 20,
-      "data": [
-        {"companyName": "CyberHive"},
-        {"companyName": "SwiftFinch"},
-        {"companyName": "CyberWolf"},
-        {"companyName": "TechOtter"},
-        {"companyName": "CircuitPuma"},
-        {"companyName": "RoboRaven"},
-        {"companyName": "AquaGator"},
-        {"companyName": "CygnusTech"},
-        {"companyName": "SparkTurtle"},
-        {"companyName": "PixelPenguin"},
-        {"companyName": "LuminaLion"},
-        {"companyName": "CodeCheetah"},
-        {"companyName": "CyberCrab"},
-        {"companyName": "NeuralNarwhal"},
-        {"companyName": "ElectronElephant"},
-        {"companyName": "BrightButterfly"},
-        {"companyName": "GeckoGenius"},
-        {"companyName": "NeonNightingale"},
-        {"companyName": "BigDataBison"},
-        {"companyName": "DataDragonfly"}
-      ]
     },
+      "companyName": {
+        "string": [
+          "CyberHive",
+          "SwiftFinch",
+          "CyberWolf",
+          "TechOtter",
+          "CircuitPuma",
+          "RoboRaven",
+          "AquaGator",
+          "CygnusTech",
+          "SparkTurtle",
+          "PixelPenguin",
+          "LuminaLion",
+          "CodeCheetah",
+          "CyberCrab",
+          "NeuralNarwhal",
+          "ElectronElephant",
+          "BrightButterfly",
+          "GeckoGenius",
+          "NeonNightingale",
+          "BigDataBison",
+          "DataDragonfly"]
+      },
       "industrySector": {
         "string": [
           "Artificial Intelligence (AI)",
