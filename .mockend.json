@@ -3,28 +3,29 @@
     "_": {
       "items": 20,
     },
-      "companyName": {
-        "string": [
-          "CyberHive",
-          "SwiftFinch",
-          "CyberWolf",
-          "TechOtter",
-          "CircuitPuma",
-          "RoboRaven",
-          "AquaGator",
-          "CygnusTech",
-          "SparkTurtle",
-          "PixelPenguin",
-          "LuminaLion",
-          "CodeCheetah",
-          "CyberCrab",
-          "NeuralNarwhal",
-          "ElectronElephant",
-          "BrightButterfly",
-          "GeckoGenius",
-          "NeonNightingale",
-          "BigDataBison",
-          "DataDragonfly"]
+    "companyName": {
+      "string": [
+        "CyberHive",
+        "SwiftFinch",
+        "CyberWolf",
+        "TechOtter",
+        "CircuitPuma",
+        "RoboRaven",
+        "AquaGator",
+        "CygnusTech",
+        "SparkTurtle",
+        "PixelPenguin",
+        "LuminaLion",
+        "CodeCheetah",
+        "CyberCrab",
+        "NeuralNarwhal",
+        "ElectronElephant",
+        "BrightButterfly",
+        "GeckoGenius",
+        "NeonNightingale",
+        "BigDataBison",
+        "DataDragonfly"
+        ]
       },
       "industrySector": {
         "string": [
